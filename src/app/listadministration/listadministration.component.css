@@ -1,0 +1,19 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  tr:hover {
+    background-color: rgb(80, 255, 255);
+  }
+  
+  th {
+    background-color: #f83232;
+    color: white;
+  }
+  
+  td {
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+  
