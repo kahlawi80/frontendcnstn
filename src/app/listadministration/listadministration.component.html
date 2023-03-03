@@ -1,10 +1,12 @@
-<table datatable class="table ">
+<div *ngIf="!condition">
+  <table datatable class="table ">
     <thead>
       <tr>
         <th>ID</th>
         <th>Nom</th>
         <th>Description</th>
         <th>delete</th>
+        <th>update</th>
       </tr>
     </thead>
     <tbody>
@@ -12,10 +14,30 @@
         <td>{{ direction.id }}</td>
         <td>{{ direction.nom }}</td>
         <td>{{ direction.description }}</td>
-        <td><button type="button" class="btn btn-outline-danger">supprimer</button></td>
+        <td><button type="button" class="btn btn-outline-danger"  (click)="deleteExpense(direction.id)">supprimer</button></td>
+        <button type="submit" class="btn btn-warning" (click)="dirDetails(direction.id)" >mise a ajour </button>
       </tr>
     </tbody>
   </table>
 
+</div>
+  <div class="container mt-3"  *ngIf="condition">
+    <h2>Stacked form</h2>
+    <form (ngSubmit)="update()" #form="ngForm">
+      <div class="mb-3 mt-3">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name"placeholder="Enter name" name="Name"  >
+        
+      </div>
+      <div class="mb-3">
+        <label for="description">description</label>
+        <input type="text" class="form-control" id="description" placeholder="Enter description"name="Description" >
+      </div>
+    
+      <button type="submit"  class="btn btn-primary">Ajouter</button>
+     
+    </form>
+  </div>
+  
   
 

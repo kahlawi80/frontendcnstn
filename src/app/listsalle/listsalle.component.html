@@ -1,0 +1,20 @@
+<table datatable class="table ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>nombre de place</th>
+        <th>delete</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let salle of salles">
+        <td>{{ salle.id }}</td>
+        <td>{{ salle.nom }}</td>
+        <td>{{ salle.nombre_place}}</td>
+        <td><button type="button" class="btn btn-outline-danger"  (click)="deleteExpense(salle.id,salle.nom)">supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+

@@ -20,9 +20,23 @@ getDirections() {
   const url = 'http://localhost:8082/dir/directions';
   return this.httpClient.get(url);
 }
-deletedir(id : String){
+deletedir(id : Number){
   
   return this.httpClient.delete('http://localhost:8082/dir/'+id);
 
 
-}}
+}
+
+updatedir(id:Number , direction : Management): Observable<Management>{
+  const url='http://localhost:8082/dir/directions/{id}'
+
+  return this.httpClient.put<Management>(url, direction);
+
+}
+
+getDirectionById(id: number){
+  const url='http://localhost:8082/dir'
+  return this.httpClient.get( `${url}/${id}`);
+}
+
+}

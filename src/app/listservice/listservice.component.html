@@ -4,6 +4,7 @@
         <th>ID</th>
         <th>Nom</th>
         <th>Description</th>
+        <th>delete</th>
       </tr>
     </thead>
     <tbody>
@@ -11,10 +12,12 @@
         <td>{{ service.id }}</td>
         <td>{{ service.nom }}</td>
         <td>{{ service.description }}</td>
-      </tr>
-      <tr>
-        <td><button type="button" class="btn btn-outline-danger">supprimer</button></td>
+        <td><button type="button" class="btn btn-outline-danger" (click)="deleteservice(service.id)">supprimer</button></td>
         
       </tr>
+      
+        
+        
+     
     </tbody>
   </table>

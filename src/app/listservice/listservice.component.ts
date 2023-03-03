@@ -5,23 +5,7 @@ import { ServiceservService } from '../services/serv';
   
 @Component({
   selector: 'app-listservice',
-  template:  `
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nom</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let service of services">
-        <td>{{ service.id }}</td>
-        <td>{{ service.nom }}</td>
-        <td>{{ service.description }}</td>
-      </tr>
-    </tbody>
-  </table>`,
+   templateUrl:'./Listservice.component.html',
   styleUrls: ['./listservice.component.css']
 })
 export class ListserviceComponent {
@@ -31,6 +15,22 @@ export class ListserviceComponent {
       this.services = data;
     });
   }
+
+
+  getservice() {
+    this.service.getServices().subscribe((data: any) => {
+      this.services = data;
+    });
+  }
+
+   deleteservice(id: number) {
+    this.service.Deleteserv(id).subscribe(() => {
+      this.getservice();
+    });
+     
+    }
+
+
 }
 
 

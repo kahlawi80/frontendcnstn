@@ -1,0 +1,28 @@
+<table datatable class="table ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>prenom</th>
+        <th>cin</th>
+        <th>tel</th>
+        <th>adresse</th>
+        <th>poste</th>
+        <th>matricule</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.nom }}</td>
+        <td>{{ employee.prenom }}</td>
+        <td>{{ employee.cin}}</td>
+        <td>{{ employee.tel }}</td>
+        <td>{{ employee.adresse }}</td>
+        <td>{{ employee.poste}}</td>
+        <td>{{ employee.matricule}}</td>
+          <td><button type="button" class="btn btn-outline-danger"  (click)="deleteemp(employee.id,employee.nom)">supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>

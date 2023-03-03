@@ -9,19 +9,31 @@
           <li class="nav-item">
             <a routerLink="acceuil-component" class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+         
+              <li><a class = "nav-link active "routerLink="addreservation"  >Reserver une salle</a></li>
+              <li><a class = "nav-link active "routerLink="demandemat"  >Demande matériel</a></li>
+            
+
+          
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Administration
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a routerLink="addcat" class="dropdown-item" href="#">Ajouter une categorie</a></li>
-              <li><a class="dropdown-item" routerLink="listcat" href="#">liste des catécogries</a></li>
+              <li><a routerLink="addcat" class="dropdown-item" >Ajouter une categorie</a></li>
+              <li><a routerLink="listcat" class="dropdown-item" >liste des catécogries</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" routerLink="addserv" href="#">Ajouter Service</a></li>
-              <li><a class="dropdown-item" routerLink="listserv" href="#">liste Service</a></li>
+              <li><a routerLink="addserv" class="dropdown-item"  >Ajouter Service</a></li>
+              <li><a routerLink="listserv" class="dropdown-item" >liste Service</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a routerLink="ajoutemployee" class="dropdown-item" >Ajouter Employee</a></li>
+              <li><a routerLink="listempl" class="dropdown-item" >liste Employee</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a routerLink="ajoutesalle" class="dropdown-item" >Ajouter salle</a></li>
+              <li><a routerLink="listsalle" class="dropdown-item" >liste salle</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a routerLink="listdem" class="dropdown-item" >liste demande</a></li>
             </ul>
           </li>
           <li class="nav-item">
