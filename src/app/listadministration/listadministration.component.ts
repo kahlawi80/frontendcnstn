@@ -11,7 +11,11 @@ export class ListadministrationComponent {
   
 
   condition: boolean=false;
-  dirdetails: any;
+  dirdetails: Management={
+    description:'',
+    nom:''
+
+  };
  
 
 
@@ -38,12 +42,12 @@ export class ListadministrationComponent {
       this.condition=true;
       this.servicemanagement.getDirectionById(id).subscribe((data: any) => {
         console.log(data);
-        this.dirDetails=data;
+        this.dirdetails=data;
         
       });
 
     }
-    update(){
+    Update(){
 
     }
 

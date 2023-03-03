@@ -14,30 +14,36 @@
         <td>{{ direction.id }}</td>
         <td>{{ direction.nom }}</td>
         <td>{{ direction.description }}</td>
-        <td><button type="button" class="btn btn-outline-danger"  (click)="deleteExpense(direction.id)">supprimer</button></td>
-        <button type="submit" class="btn btn-warning" (click)="dirDetails(direction.id)" >mise a ajour </button>
+        <td><button type="button" class="btn btn-outline-danger"
+            (click)="deleteExpense(direction.id)">supprimer</button></td>
+        <button type="submit" class="btn btn-warning" (click)="dirDetails(direction.id)">mise a ajour </button>
       </tr>
     </tbody>
   </table>
 
 </div>
-  <div class="container mt-3"  *ngIf="condition">
-    <h2>Stacked form</h2>
-    <form (ngSubmit)="update()" #form="ngForm">
-      <div class="mb-3 mt-3">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name"placeholder="Enter name" name="Name"  >
-        
-      </div>
-      <div class="mb-3">
-        <label for="description">description</label>
-        <input type="text" class="form-control" id="description" placeholder="Enter description"name="Description" >
-      </div>
-    
-      <button type="submit"  class="btn btn-primary">Ajouter</button>
-     
-    </form>
-  </div>
-  
-  
 
+
+
+<div class="card border-info mb-3"  style="max-width: 25rem; margin:auto; margin-top: 20px;" *ngIf="condition">
+  <div class="card-header">Mise ajour</div>
+  <div class="card-body" *ngIf="dirdetails">
+    <h5 class="card-title">Mise a jour</h5>
+
+    <form (ngSubmit)="Update()" #form="ngForm">
+      <div>
+        <label><b>Nom: </b></label>
+        <input type="text" class="form-control" id="nom" placeholder="Enter description" name="nom"
+          [(ngModel)]="dirdetails.nom">
+      </div>
+      <div>
+        <label><b>Description: </b></label>
+        <input type="text" class="form-control" id="description" placeholder="Enter description" name="Description"
+          [(ngModel)]="dirdetails.description">
+      </div>
+      <button type="submit" class="btn btn-success">Mettre a jour</button>
+
+    </form>
+
+  </div>
+</div>
