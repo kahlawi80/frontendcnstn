@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header">
+        Formulaires Direction Générale
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Télécharger vos Formulaires</h5>
+
+        <br>
+
+        <input id="myInput" type="search" class="form-control" placeholder="Search.." [(ngModel)]="filter">
+        <br>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Document</th>
+                    <th>Telechargement</th>
+                </tr>
+            </thead>
+            <tbody  class="input-group my-4 col-6 mx-auto" id="myTable" *ngFor="let myfrom of from | search: filter">
+                <tr>
+                    <td>{{myfrom.name}}</td>
+                    <td><a href="{{ myfrom.link }}">
+                            <img src="assets/img/iconepdf.png" alt="How to search in long PDF"
+                                style="width:26px; height: 26px;" />
+                        </a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

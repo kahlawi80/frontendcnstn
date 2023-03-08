@@ -10,6 +10,7 @@
         <th>poste</th>
         <th>matricule</th>
         <th>delete</th>
+        <th>update</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
         <td>{{ employee.poste}}</td>
         <td>{{ employee.matricule}}</td>
           <td><button type="button" class="btn btn-outline-danger"  (click)="deleteemp(employee.id,employee.nom)">supprimer</button></td>
+          <td><button type="submit"  class="btn btn-outline-warning">Mettre a jour</button></td>
       </tr>
     </tbody>
   </table>

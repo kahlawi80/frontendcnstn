@@ -19,7 +19,18 @@ import { ListsalleComponent } from './listsalle/listsalle.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { DemandematComponent } from './demandemat/demandemat.component';
 import { ListedemandeComponent } from './listedemande/listedemande.component';
-import { UpadatedirComponent } from './upadatedir/upadatedir.component';
+import { UpdatedirComponent } from './updatedir/updatedir.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormComponent } from './form/form.component';
+import { SearchPipe } from './search.pipe';
+import { FormDSCComponent } from './formDSC.component/formDSC.component';
+import { FormguidesComponent } from './formguides/formguides.component';
+import { FormlogicielsComponent } from './formlogiciels/formlogiciels.component';
+import { FormDVPSComponent } from './formDVPS.component/formDVPS.component';
+import { FormDSINComponent } from './formDSIN.component/formDSIN.component';
+
+
+
 
 
 @NgModule({
@@ -38,9 +49,19 @@ import { UpadatedirComponent } from './upadatedir/upadatedir.component';
     ReservationComponent,
     DemandematComponent,
     ListedemandeComponent,
-    UpadatedirComponent
+    UpdatedirComponent,
+    FooterComponent,
+    FormComponent,
+    SearchPipe,
+    FormDSCComponent,
+    FormDVPSComponent,
+    FormguidesComponent,
+    FormlogicielsComponent,
+    FormDSINComponent
     
     
+
+ 
   ],
   imports: [
     BrowserModule,

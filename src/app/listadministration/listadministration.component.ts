@@ -48,6 +48,16 @@ export class ListadministrationComponent {
 
     }
     Update(){
+      if(this.dirdetails?.id){
+        this.servicemanagement.updatedir(this.dirdetails.id,this.dirdetails).subscribe(()=> {
+         this.condition=false;
+         alert("votre mise a jour ajouter avec succées ");
+         this.getDirections(); 
+
+        }
+
+        );
+      }
 
     }
 

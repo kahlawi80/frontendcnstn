@@ -6,6 +6,7 @@
         <th>Matériel demander</th>
         <th>Employee</th>
         <th>delete</th>
+        <th>update</th>
       
       </tr>
     </thead>
@@ -16,6 +17,7 @@
         <td>{{ demande.materiel_demmander}}</td>
         <td>{{ demande. employee_id}}</td>
         <td><button type="button" class="btn btn-outline-danger"  (click)="deletedemande(demande.id,demande.nom)">supprimer</button></td>
+        <td><button type="submit" class="btn btn-outline-warning">Mettre a jour</button></td>
       </tr>
     </tbody>
   </table>

@@ -5,6 +5,7 @@
         <th>Nom</th>
         <th>Description</th>
         <th>delete</th>
+        <th>update</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
         <td>{{ service.nom }}</td>
         <td>{{ service.description }}</td>
         <td><button type="button" class="btn btn-outline-danger" (click)="deleteservice(service.id)">supprimer</button></td>
+        <td><button type="submit"  class="btn btn-outline-warning">Mettre a jour</button></td>
         
       </tr>
       

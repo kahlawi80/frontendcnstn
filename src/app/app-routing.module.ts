@@ -13,7 +13,14 @@ import { ListsalleComponent } from './listsalle/listsalle.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { DemandematComponent } from './demandemat/demandemat.component';
 import { ListedemandeComponent } from './listedemande/listedemande.component';
-import { UpadatedirComponent } from './upadatedir/upadatedir.component';
+import { UpdatedirComponent } from './updatedir/updatedir.component';
+import { FormComponent } from './form/form.component';
+import { FormDSCComponent } from './formDSC.component/formDSC.component';
+import { FormDVPSComponent } from './formDVPS.component/formDVPS.component';
+import { FormguidesComponent } from './formguides/formguides.component';
+import { FormlogicielsComponent } from './formlogiciels/formlogiciels.component';
+import { FormDSINComponent } from './formDSIN.component/formDSIN.component';
+
 
 
 const routes: Routes = [
@@ -31,8 +38,15 @@ const routes: Routes = [
   {path:'addreservation', component:ReservationComponent},
   {path:'demandemat', component:DemandematComponent},
   {path:'listdem', component:ListedemandeComponent},
-  {path:'updir', component:UpadatedirComponent}
-   
+  {path:'updir', component:UpdatedirComponent},
+  {path:'formDG',component:FormComponent},
+  {path:'formdsc',component:FormDSCComponent},
+  {path:'formdvps', component:FormDVPSComponent},
+  {path:'formGuides', component:FormguidesComponent},
+  {path:'formLogiciels',component:FormlogicielsComponent},
+  {path:'formdsin',component:FormDSINComponent}
+ 
+  
 ];
 
 @NgModule({

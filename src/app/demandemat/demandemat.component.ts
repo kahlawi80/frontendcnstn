@@ -14,7 +14,7 @@ export class DemandematComponent {
   employees:any;
      newdemande:Demandemat={
       id:0,
-      date_demmande:undefined,
+      date_demmande:new Date(),
       materiel_demmander:'',
       employee:{
        

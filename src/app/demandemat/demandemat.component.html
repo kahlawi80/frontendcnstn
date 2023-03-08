@@ -1,22 +1,11 @@
-<div class="card border-info mb-3" style="max-width: 25rem; margin: auto; margin-top: 20px;">
+<div class="card border-primary mb-3" style="max-width: 25rem; margin: auto; margin-top: 20px;">
     <div class="text-bg-primary p-3">Demande matériels</div>
     <div class="card-body">
         <h5 class="card-title">Demande</h5>
         <div>
             <form (ngSubmit)="adddemande()" #form="ngForm">
 
-                <div class="mb-3 mt-3">
-                    <label for="name">Date Demande</label>
-                    <input type="date" class="form-control" id="name" placeholder="Entrer la date du demande" name="Name"
-                        [(ngModel)]="newdemande.date_demmande">
-
-                </div>
-                <!-- <div class="mb-3 mt-3">
-                    <label for="name">Matériel demander</label>
-                    <input type="text" class="form-control" id="name" placeholder="Matériels demander" name="Name"
-                        [(ngModel)]="newdemande.materiel_demmander">
-
-                </div> -->
+             
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Matériel demander</label>
                     <textarea class="form-control"  id="name" placeholder="Matériels demander" name="Name"

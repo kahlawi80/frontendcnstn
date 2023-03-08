@@ -5,7 +5,7 @@
         <th>Nom</th>
         <th>nombre de place</th>
         <th>delete</th>
-      
+        <th>update</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +14,7 @@
         <td>{{ salle.nom }}</td>
         <td>{{ salle.nombre_place}}</td>
         <td><button type="button" class="btn btn-outline-danger"  (click)="deleteExpense(salle.id,salle.nom)">supprimer</button></td>
+       <td> <button type="submit"  class="btn btn-outline-warning">Mettre a jour</button></td>
       </tr>
     </tbody>
   </table>

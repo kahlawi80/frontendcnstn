@@ -25,7 +25,7 @@
 
 
 
-<div class="card border-info mb-3"  style="max-width: 25rem; margin:auto; margin-top: 20px;" *ngIf="condition">
+<div class="card border-dark mb-3"  style="max-width: 25rem; margin:auto; margin-top: 20px;" *ngIf="condition">
   <div class="card-header">Mise ajour</div>
   <div class="card-body" *ngIf="dirdetails">
     <h5 class="card-title">Mise a jour</h5>
@@ -41,7 +41,9 @@
         <input type="text" class="form-control" id="description" placeholder="Enter description" name="Description"
           [(ngModel)]="dirdetails.description">
       </div>
-      <button type="submit" class="btn btn-success">Mettre a jour</button>
+      <div>
+        <button type="submit"  class="btn btn-outline-warning">>Mettre a jour</button>
+      </div>
 
     </form>
 
